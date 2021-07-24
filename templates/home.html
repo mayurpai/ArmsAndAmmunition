@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Arms and Ammunition</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/styles.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/splashscreen.css') }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="http://ajax.microsoft.com/ajax/jQuery/jquery-1.4.4.min.js"></script>
+    <script src="{{ url_for('static', filename='styles/jquery.splashscreen.js') }}"></script>
+    <script src="{{ url_for('static', filename='styles/script.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  </head>
+
+  <header>
+	  <div class="main">
+		  <div class="logo">
+            <a href="/"><img src="{{ url_for('static', filename='images/header.png') }}">
+		  </div>
+	  </div>
+  </header>
+
+  <div id="promoIMG">
+  </div>
+
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="/manufacturers" id="manufacturers">Manufacturers<i class="fa fa-fw fa-cog"></i></a>
+      <a href="/vendors" id="vendors">Vendors<i class="fa fa-fw fa-users"></i></a>
+      <a href="/weapons" id="weapons">Weapons<i class="fa fa-fw fa-bomb"></i></a>
+      <a href="/ammunition" id="ammunition">Ammunition<i class="fa fa-fw fa-database"></i></a>    
+      <a href="/order" id="order" >Order<i class="fa fa-fw fa-shopping-cart"></i></a>   
+      <a href="/details" id="triggers">Triggers<i class="fa fa-fw fa-server"></i></a>  
+    </div>
+    <button type="submit" name="lo" class="logout"><a href="\logout">Log-Out</a></button>
+    <div class="news">
+      <span>Latest Updates</span>
+      <ul>
+        <li><a href="#post1">Heckler & Koch launches VP9 2020 upgrade...</a></li>
+        <li><a href="#post2">Glock 19 named the 'top selling pistol in 2020'...</a></li>
+        <li><a href="#post3">CMMG debuts 22LR End Cap Banshee pistol...</a></li>
+        <li><a href="#post4">S&W upholds 121-year Police Tradition...</a></li>
+        <li><a href="#post5">ZEV & SIG team up for Octane Z365 pistol...</a></li>
+        <li><a href="#post6">S&W doubles quarterly revenue, adds 287 jobs...</a></li>
+        <li><a href="#post7">The US Airforce orders B&T APC9K models...</a></li>
+        <li><a href="#post8">SIG Sauer recalls all cross bolt-action rifles...</a></li>
+        <li><a href="#post9">Unboxing the latest Glock P80...</a></li>
+      </ul>
+    </div>
+
+    <div class="wrapper">
+      <div class="card" id="post1">
+        <div class="row">
+          <div class="column1">
+            <div class="profileicon"> 
+              <img src="{{ url_for('static', filename='images/man_hnk.png') }}">
+            </div>
+          </div>
+          <div class="column2">
+            <h2>Heckler & Koch</h2>
+            <h3>Oberndorf, Germany</h3>
+          </div>
+        </div>
+        <div class="postimg">
+          <img src="{{ url_for('static', filename='images/newsfeed1.png') }}">
+        </div>
+        <div class="postcaption">
+          <h4>Heckler & Koch launches VP9 2020 upgrade</h4>
+          <h5>Heckler & Koch is pleased to announce several updates to its popular VP9 pistol for 2020. All 2020 models will include the following upgrades...</h5>
+        </div>
+        <div class="descriptions">
+          <h1>Heckler & Koch launches VP9 2020 upgrade</h1>
+          <p>Heckler & Koch is pleased to announce several updates to its popular VP9 pistol for 2020. All 2020 models will include the following upgrades:</p>
+          <ul>
+           <li>Updated 17-round, flush-fit magazines.</li>
+           <li>New sight configuration, which includes a high-visibility front sight and a “clean” black serrated rear.</li>
+            <li>Optics-ready cut for mini reflex sight. Sold with cap installed. Adapter plates are sold separately and are available from the HK web store.</li>
+          </ul>
+          <p>“While the VP is easily the most successful pistol in the history of HK, we are still very committed to making it even better” HK-USA COO/CSO Mike Holley said. “From a business perspective, these improvements will certainly help the VP perform even better in the marketplace. But more importantly, they will make the VP pistols, and even those who shoot them, perform better in the field too.”</p>
+          <p>The updated models retain all the existing features of the VP that have quickly made the VP series a class leader in ergonomics and trigger performance.</p>
+          <p>The VP’s short, crisp trigger is one of the best out-of-the-box striker-fired triggers available. Additionally, the adaptable grip frame allows shooters to interchange both backstraps and side grip panels in 27 unique configurations for a custom fit.</p>
+          <p>These new and existing features combine to ensure that the VP will continue to be one of the most user-friendly, shootable pistols available for years to come.</p>
+          <a href="https://hk-usa.com/heckler-koch-2020-vp9-update/">
+            <button>
+              <i class="readmore"></i>
+              Read more...
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <div class="card" id="post2">
+        <div class="row">
+          <div class="column1">
+            <div class="profileicon">
+              <img src="{{ url_for('static', filename='images/man_gunsdotcom.png') }}">
+            </div>
+          </div>
+          <div class="column2">
+            <h2>Guns.com</h2>
+            <h3>Burnsville, Minnesota, United States</h3>
+          </div>
+        </div>
+        <div class="postimg">
+          <img src="{{ url_for('static', filename='images/newsfeed2.jpg') }}">
+        </div>
+        <div class="postcaption">
+          <h4>Glock 19 named the 'top selling pistol in 2020'</h4>
+          <h5>Glock 19 is the most sold pistol on our website this year. The sleeky yet powerful handgun has gained immense popularity amongst the light firearms...</h5>
+        </div>
+        <div class="descriptions">
+          <h1>Glock 19 named the 'top selling pistol in 2020'</h1>
+          <p>When it comes to a universal adapter for today's pistol buyer, the Glock 19 is often regarded as many things to many people. Easily concealable, this 15+1 9mm is often tapped for everyday use while still being both fun at the range and a solid service and home defense tool. Steady incremental improvement a couple of years ago brought us the current Gen 5 model, which proved our most popular in 2020.</p>
+          <p>To the delight of Glock fanboys and girls everywhere, the legendary gun maker announced the latest iteration of everyone’s favorite polymer pistols with the unveiling of the Gen. 5.</p>
+          <p>Though Glock fans have long suspected the Gen. 5 series was on the horizon, Glock aficionados were no less ecstatic when the 17 and 19 dropped in late August.</p>
+          <p>As the G19 is one of my favorite Glock model pistols, I was thrilled when the company agreed to send me the new Gen. 5 19 to test out and compare with my current Gen. 4 model.</p>
+          <p>The G19 is a popular carry gun so it’s only natural concealed carriers would want to know whether the new generation will work inside their current Gen. 4 rigs. In short, the answer is maybe. The added slide stop does change the fit in certain holsters. While some holster might just feel a tad tight, others will offer no positive engagement. Unfortunately, we suggest trying before buying.</p>
+          <p>While they certainly haven’t reinvented the wheel, Glock has successfully navigated the waters of the next generation. The Gen. 5 G19 is a solid pistol platform that has enough new features to generate excitement without straying too far from what makes the Glock brand work.</p>
+          <a href="https://www.guns.com/news/2020/12/29/top-selling-pistols-on-gunscom-in-2020">
+            <button>
+              <i class="readmore"></i>
+              Read more...
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <div class="card" id="post3">
+        <div class="row">
+          <div class="column1">
+            <div class="profileicon">
+              <img src="{{ url_for('static', filename='images/man_cmmg.png') }}">
+            </div>
+          </div>
+          <div class="column2">
+            <h2>CMMG Inc.</h2>
+            <h3>Boonville, California, United States</h3>
+          </div>
+        </div>
+        <div class="postimg">
+          <img src="{{ url_for('static', filename='images/newsfeed3.jpg') }}">
+        </div>
+        <div class="postcaption">
+          <h4>CMMG debuts 22LR End Cap Banshee pistol</h4>
+          <h5>Missouri-based CMMG this month announced what is billed as the company's shortest and most compact Banshee model ever, the .22LR End Cap...</h5>
+        </div>
+        <div class="descriptions">
+          <h1>CMMG debuts 22LR End Cap Banshee pistol</h1>
+          <p>Missouri-based CMMG this month announced what is billed as the company's shortest and most compact Banshee model ever, the .22LR End Cap. </p>
+          <p>Chambered in the popular rimfire staple, the new blow-back action Banshee deletes the buffer tube and receiver extension common on AR-type pistols and replaces it instead with a capped lower receiver. </p>
+          <p>This produces a smaller format gun than most .22LR AR15 builds on the market – as short as 14.7 inches in the 4.5-inch barrel model. CMMG says the .22LR End Cap is compatible with all of the company's .22LR AR Conversion Kits, as well as any AR15 that uses a dedicated CMMG .22LR bolt carrier group and barrel.</p>
+          <p>The pistol will be offered in a 100 Mk4 Series gun with a 9-inch barrel, a 200 Mk4 with upgraded Magpul MOE furniture and a better muzzle device, and a 300 Mk4 with a short 4.5-inch barrel that ends in a KAK Slim Flash Can.</p>
+          <p>All use a forged 7075-T6 M4 type upper with an AR15-type lower, sport a single-stage Mil-Spec style trigger, and carry an M-LOK handguard. All are threaded 1/2x28TPI pitch for common muzzle devices and suppressors for those seeking some quiet time. The guns use a 25-round magazine. </p>
+          <p>The End Cap's receiver cap is available in two variations: standard, with a smooth exterior and CMMG logo and a quick-detach, able to swap out with the aid of a 3/8-inch hex wrench. Banshee 100 Series guns come with the logo cap while the 200 and 300 come with the QD cap installed. Either cap can be purchased separately from CMMG for under $30. No word on if the company plans an M1913 cap to add a stabilizing brace, which seems like a logical accessory – at least for now. </p>
+          <p>MSRP on the complete CMMG .22LR End Cap Banshee pistols range from $799 to $1,024 depending on the model and include CMMG’s Lifetime Quality Guarantee.</p>
+          <a href="https://www.guns.com/news/2020/12/28/cmmg-debuts-22lr-end-cap-banshee-pistol">
+            <button>
+              <i class="readmore"></i>
+              Read more...
+            </button>
+          </a>    
+        </div>
+      </div>
+
+      <div class="card" id="post4">
+        <div class="row">
+          <div class="column1">
+            <div class="profileicon">
+              <img src="{{ url_for('static', filename='images/man_snw.jpg') }}">
+            </div>
+          </div>
+          <div class="column2">
+            <h2>Smith & Wesson Brands, Inc</h2>
+            <h3>Springfield, Massachusetts, United States</h3>
+          </div>
+        </div>
+        <div class="postimg">
+          <img src="{{ url_for('static', filename='images/newsfeed4.png') }}">
+        </div>
+        <div class="postcaption">
+          <h4>Smith & Wesson upholds 121-year Police Tradition</h4>
+          <h5>Springfield's police department announced they will be holstering the Smith & Wesson M&P M2.0 as their new law enforcement handgun of choice...</h5>
+        </div>
+        <div class="descriptions">
+          <h1>Smith & Wesson upholds 121-year Police Tradition</h1>
+          <p>An American gun legacy lives on in Springfield, Massachusetts. The city’s police department announced they will be holstering the Smith & Wesson M&P M2.0 as their new law enforcement handgun of choice. The move marks more than a century of arming the city’s officers with S&W firearms.</p>
+          <p>Smith & Wesson Brands, Inc announced the decision Dec. 15, 2020. But Springfield’s finest first started carrying S&W guns back in 1899. It is a fitting tribute for a company that has claimed the Springfield as its home since 1856.</p>
+          <p>“We’re very appreciative of the entire team at Smith & Wesson,” said Springfield Police Commissioner Cheryl Clapprood. “They have the best and safest products on the market. Their company being based in our city and many of their employees living in Springfield has led to a long-term partnership that our officers take pride in.”</p>
+          <p>The company has a history of going above and beyond to support its local law enforcement. In 2010, they donated 580 new M&P 40 pistols to the Springfield Police Department. The donation was valued at nearly $270,000. </p>
+          <p>The M&P 2.0 is the latest innovation to the respected M&P polymer pistol line. The guns come with four interchangeable palmswell inserts and a light, crisp M2.0 trigger with a tactile and audible reset. The polymer frame is both durable and provides an 18-degree grip angle for a natural point of aim. </p>
+          <p>“The new M&P M2.0, with its aggressive texturing and tactile trigger reset, provides law enforcement with the ultimate in reliability and dependability,” said Matthew Fehmel, senior director of Global Professional & International Sales for Smith & Wesson. “This upgrade to the M&P M2.0 should carry the Springfield Police Department through many years of service. Most importantly, we’re proud that our pistols are called on to protect law enforcement in Smith & Wesson’s hometown of Springfield, Massachusetts.”</p>
+          <p>It is also worth noting that the M&P 2.0 is available in full size, compact and subcompact variants. It can be chambered in 9mm, .40 S&W, and .45 ACP. So, there are plenty of options for both law enforcement purposes and concealed carry.</p>
+          <a href="https://www.guns.com/news/2020/12/15/s-and-w-upholds-121-year-police-tradition">
+            <button>
+              <i class="readmore"></i>
+              Read more...
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <div class="card" id="post5">
+        <div class="row">
+          <div class="column1">
+            <div class="profileicon">
+              <img src="{{ url_for('static', filename='images/man_gunsdotcom.png') }}">
+            </div>
+          </div>
+          <div class="column2">
+            <h2>Guns.com</h2>
+            <h3>Burnsville, Minnesota, United States</h3>
+          </div>
+        </div>
+        <div class="postimg">
+          <img src="{{ url_for('static', filename='images/newsfeed5.png') }}">
+        </div>
+        <div class="postcaption">
+          <h4>ZEV & SIG team up for Octane Z365 pistol</h4>
+          <h5>Washington-based ZEV Technologies and New Hampshire's Sig Sauer this week lifted the curtain on an exciting mod for the latter's P365 micro-carry 9mm, the new Octane Z365....</h5>
+        </div>
+        <div class="descriptions">
+          <h1>ZEV & SIG team up for Octane Z365 pistol</h1>
+          <p>Washington-based ZEV Technologies and New Hampshire's Sig Sauer this week lifted the curtain on an exciting mod for the latter's P365 micro-carry 9mm, the new Octane Z365. As you would expect, the Z365 is packed with semi-custom offerings from ZEV’s catalog including a PRO Barrel, Combat Sights, and the optics-ready Octane slide</p>
+          <p>Weight is 18-ounces, and all other specs fall in line with Sig's basic P365 family. “We’re excited about this collaboration between Sig Sauer and ZEV," said Tom Taylor, Sig's CMO and EVP, Commercial Sales. "The design of the Z365 is excellent, making it a high-performance carry gun.”</p>
+          <p>The Octane Z365 mod ships with two 10-round magazines and has an MSRP of $1,199.</p>
+          <a href="https://www.guns.com/news/2020/12/08/zev-and-sig-team-up-for-octane-z365-pistol">
+            <button>
+              <i class="readmore"></i>
+              Read more...
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <div class="card" id="post6">
+        <div class="row">
+          <div class="column1">
+            <div class="profileicon">
+              <img src="{{ url_for('static', filename='images/man_snw.jpg') }}">
+            </div>
+          </div>
+          <div class="column2">
+            <h2>Smith & Wesson Brands, Inc</h2>
+            <h3>Springfield, Massachusetts, United States</h3>
+          </div>
+        </div>
+        <div class="postimg">
+          <img src="{{ url_for('static', filename='images/newsfeed6.jpg') }}">
+        </div>
+        <div class="postcaption">
+          <h4>S&W doubles quarterly revenue, adds 287 jobs</h4>
+          <h5>Smith & Wesson Brands, Inc last week announced its financial results for the second quarter of fiscal year 2021 and the news was all good...</h5>
+        </div>
+        <div class="descriptions">
+          <h1>S&W doubles quarterly revenue, adds 287 jobs</h1>
+          <p>Smith & Wesson Brands, Inc last week announced its financial results for the second quarter of fiscal year 2021 and the news was all good. </p>
+          <p>The quarter, which ended Oct. 31, 2020, saw the completed spin-off from American Outdoor Brands who retained its outdoor products and accessories business, leaving the 168-year-old S&W to move forward with its own firearms products and associated M&P and Performance Center brands as well as Thompson/Center Arms, and suppressor-maker Gemtech.</p>
+          <p>The Second Quarter figures were sweet, including a 118.7 percent increase in quarterly net sales from $113.7 million to $248.7 million when compared to the same quarter from last year. Longarm sales more than doubled, climbing 217 percent to $76 million while handgun sales saw a more modest 98 percent growth to $161 million. The record-breaking financial performance gave S&W $49.1 million in net income, left them with $55.5 million of cash on hand, and zero bank debt-- in the same year that firearms giant Remington was broken up at bankruptcy auction. </p>
+          <p>"Because of the hard work of our employees, who have been diligently following our safety protocols, we have been able to continue safely operating our business and, during these extremely difficult times when so many of our fellow Americans are out of work, we successfully created and filled 287 new jobs during our second quarter," said Mark Smith, President and Chief Executive Officer. "Along with our existing employees, our new team members played a critical role in achieving these record-breaking numbers."</p>
+          <p>As noted by The Motley Fool, the net sales data blew away analyst estimates, who had pegged S&W at hitting just $223 million in sales. The news of Big Blue's second record-setting quarter saw the company's publicly traded stock climb 5.2 percent to $15.91.</p>
+          <p>It should be noted that November's gun sales, based on point-of-sale background check figures, were the largest in the 21 years that the FBI has maintained records, up 45 percent from last year.</p>
+          <a href="https://www.guns.com/news/2020/12/07/s-and-w-doubles-quarterly-revenue-adds-287-jobs">
+            <button>
+              <i class="readmore"></i>
+              Read more...
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <div class="card" id="post7">
+        <div class="row">
+          <div class="column1">
+            <div class="profileicon">
+              <img src="{{ url_for('static', filename='images/man_bnt.png') }}">
+            </div>
+          </div>
+          <div class="column2">
+            <h2>Brügger & Thomet</h2>
+            <h3>Thun, Switzerland</h3>
+          </div>
+        </div>
+        <div class="postimg">
+          <img src="{{ url_for('static', filename='images/newsfeed7.png') }}">
+        </div>
+        <div class="postcaption">
+          <h4>The US Airforce orders B&T APC9K models</h4>
+          <h5>Florida-based B&T USA announced last week that its ultra-compact APC9K PRO platform has been purchased by the U.S. Air Force, following in the wake of its adoption last year by the Army...</h5>
+        </div>
+        <div class="descriptions">
+          <h1>The US Airforce orders B&T APC9K models</h1>
+          <p>Florida-based B&T USA announced last week that its ultra-compact APC9K PRO platform has been purchased by the U.S. Air Force, following in the wake of its adoption last year by the Army. </p>
+          <p>The standard APC9 is a 9mm blowback action three-position select-fire SMG that fires from a closed bolt at a cyclic rate of 1,080 rounds-per-minute. The APC9K, with the final letter in the designation short for “kurz” or short, is a more compact version with a 5.4-inch barrel and 13.6-inch overall length with the stock fully collapsed. </p>
+          <p>“B&T is honored to have our APC9K PRO selected by the United States Air Force" said Jon Scott, VP of Sales, B&T USA. "We’re pleased to know that specially trained Airmen will be equipped with the finest equipment available to not only ensure their personal safety during challenging assignments, but contribute to the overall success of their mission." </p>
+          <p>The Tampa-based subsidiary of the Swiss firm formerly known as Brugger & Thomet was one of six companies who submitted designs to the Army in September 2018 for what the service termed “Sub Compact Weapons.” These guns, “capable of engaging threat personnel with a high volume of lethal and accurate fires at close range with minimal collateral damage,” were to be used by the special teams tasked with protecting high-value officers and dignitaries such as the Supreme Allied Commander Europe the commander of U.S. Forces Korea.</p>
+          <p>In the end, the primary contract in April 2019 was worth just $2.5 million for 350 SCWs, with an option for up to 1,000 of the weapons, generally replacing HK MP5s in service. However, B&T beat out a field of big names in the gun world such as Sig Sauer, whose Copperhead was seen as a forerunner of what the company had submitted to the Army’s SCW tender. The military originally courted a baker’s dozen gun makers to submit designs last year, including  Angstadt, Colt, CMMG, CZ, Heckler & Koch, Lewis Machine & Tool, Noveske, PTR, Quarter Circle, and Zenith Firearms— the literal A-to-Z in compact guns.</p>
+          <p>In addition, B&T USA has seen some sales to LE customers of the platform, including the Miami Beach Police Department and Westchester Police.</p>
+          <a href="https://www.guns.com/news/2020/12/07/air-force-orders-b-and-t-apc9k-models">
+            <button>
+              <i class="readmore"></i>
+              Read more...
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <div class="card" id="post8">
+        <div class="row">
+          <div class="column1">
+            <div class="profileicon">
+              <img src="{{ url_for('static', filename='images/man_sig.png') }}">
+            </div>
+          </div>
+          <div class="column2">
+            <h2>SIG Sauer</h2>
+            <h3>Eckernförde, Germany</h3>
+          </div>
+        </div>
+        <div class="postimg">
+          <img src="{{ url_for('static', filename='images/newsfeed8.jpg') }}">
+        </div>
+        <div class="postcaption">
+          <h4>SIG Sauer recalls all cross bolt-action rifles</h4>
+          <h5>New Hampshire-based Sig Sauer last week warned all users of its CROSS bolt-action rifles to immediately stop use as part of a safety recall...</h5>
+        </div>
+        <div class="descriptions">
+          <h1>SIG Sauer recalls all cross bolt-action rifles</h1>
+          <p>New Hampshire-based Sig Sauer last week warned all users of its CROSS bolt-action rifles to immediately stop use as part of a safety recall. </p>
+          <p>Sig Sauer has viewed an online video that presents a single CROSS Bolt-Action Rifle with a potential safety concern.  This gun has been returned to Sig Sauer and upon evaluation it has been confirmed that the rifle exhibited a delayed discharge after the trigger was pulled.  Sig Sauer has decided to issue a safety recall in order to implement a modification to the firing action to address this potential safety concern.</p>
+          <p>To register for the recall process please visit [the recall website] or call Sig Sauer Customer Service at 603-610-3000, option 1.  Following registration Sig Sauer will further communicate with you to arrange for the return of your rifle to Sig Sauer for the safety improvement.  All shipment and replacement costs will be covered by Sig Sauer. </p>
+          <p>Sig Sauer is committed to providing the highest quality, industry leading firearms in the marketplace and is requesting that consumers take immediate action and follow the recall process as described. </p>
+          <p>Sig Sauer introduced the CROSS late last year as its first U.S.-produced bolt gun. Using a one-piece aluminum receiver with a folding adjustable SIG precision stock, the sub-7-pound CROSS was to be chambered in 6.5CM, .308 Win and .277 SIG Fury, the latter a new hybrid cartridge recently approved by SAAMI.</p>
+          <a href="https://www.guns.com/news/2020/11/30/sig-sauer-recalls-all-cross-bolt-action-rifles">
+            <button>
+              <i class="readmore"></i>
+              Read more...
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <div class="card" id="post9">
+        <div class="row">
+          <div class="column1">
+            <div class="profileicon">
+              <img src="{{ url_for('static', filename='images/man_glock.png') }}">
+            </div>
+          </div>
+          <div class="column2">
+            <h2>Glock Ges.m.b.H.</h2>
+            <h3>Deutsch-Wagram, Austria</h3>
+          </div>
+        </div>
+        <div class="postimg">
+          <img src="{{ url_for('static', filename='images/newsfeed9.png') }}">
+        </div>
+        <div class="postcaption">
+          <h4>Unboxing the latest Glock P80</h4>
+          <h5>This year, Glock decided to pay tribute to the original P80 by re-releasing it in a limited quantity. We go over all the ways it's identical to the original P80, as well as, a few places it differs...</h5>
+        </div>
+        <div class="descriptions">
+          <h1>Unboxing the latest Glock P80</h1>
+          <p>In a salute to the pistol that kicked off Gaston Glock’s impressive firearm manufacturing career, the Glock P80 is retro done right.</p>
+          <p>During the 1970’s Mr. Glock was manufacturing military hardware such as knives, grenade cases, machine gun belt links, etc. However, in 1980 when the Austrian military decided they needed a new service pistol Glock jumped at the opportunity and decided he would make his own pistol for the competition. By 1982 Gaston Glock had been awarded the contract by the Austrian military and his entry was designated Pistole 80 or P80.</p>
+          <p>This year, Glock decided to pay tribute to the original P80 by re-releasing it in a limited quantity. In the video above, we go over all the ways it's identical to the original P80, as well as, a few places it differs.</p>
+          <a href="https://www.guns.com/news/2020/12/11/unboxing-the-latest-glock-p80">
+            <button>
+              <i class="readmore"></i>
+              Read more...
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <br> <br> <br>
+
+    </div>
+  </body>
+
+  <footer>
+    <div class="row">
+      <div class="column3">
+        <img src="{{ url_for('static', filename='images/dev_logo.png') }}">
+      </div>
+      <div class="columnt">
+        <h1>Developed by</h1>
+        <div class="column4">
+          <h1>Mayur Pai B H</h1>
+          <h2>Backend Developer</h2>
+          <h3>4SF18IS053</h3>
+          <p>mayur5pai@gmail.com</p>
+          <p>+91 9611609185</p>
+        </div>
+      
+        <div class="column5">
+          <h1>Krishna G Kamath</h1>
+          <h2>Frontend Developer</h2>
+          <h3>4SF18IS044</h3>
+          <p>krishnagkamath@gmail.com</p>
+          <p>+91 9483912385</p>
+        </div>
+      </div>
+      <div class="column6">   
+        <div class="vl"></div>
+      </div>
+      <div class="social">
+        <h1>Mayur Pai B H</h1>
+        <a href="https://wa.me/+919611609185"><i class="fa fa-whatsapp fa-3x"></i></a>
+        <a href="https://www.instagram.com/unmatched._.soul/"></a><i class="fa fa-instagram fa-3x"></i>
+        <a href="https://www.linkedin.com/in/mayur-pai5/"><i class="fa fa-linkedin fa-3x"></i></a>
+        <h1>Krishna G Kamath</h1>
+        <a href="https://wa.me/+919483912385"><i class="fa fa-whatsapp fa-3x"></i></a>
+        <a href="https://www.instagram.com/krishnagkamath/"><i class="fa fa-instagram fa-3x"></i></a>
+        <a href="https://www.linkedin.com/in/krishnagkamath/"><i class="fa fa-linkedin fa-3x"></i></a>
+      </div>
+    </div>
+    <div class="copyright">
+      <hr>
+      <h4>Copyright © 2020 Mayur & Krishna. All rights reserved.</h4>
+    </div>
+  </footer>
+</html>

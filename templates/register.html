@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/loginstyle.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/splashscreen.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+    <link rel="shortcut icon" href="#" />
+    <title>Register Form</title>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="form-box">
+        <div class="button-box">
+          <div id="btn"></div>
+          <a href="{{ url_for('login') }}"><button type="button" class="toggle-btn" onclick="login()">Log In</button></a>
+          <button type="button" class="toggle-btn" onclick="register()">&nbsp Register</button>
+          </div>
+          <form id="register" action="\register" method="POST" class="input-group" >
+            <input type="text" class="input-field" name="uid" autocomplete="off" placeholder="User Id" required>
+            <input type="text" class="input-field" name="uname" autocomplete="off" placeholder="Your Name" required>
+            <input type="text" class="input-field" name="uwing" autocomplete="off" placeholder="Your wing of service" required>
+            <input type="password" class="input-field" name="upass" placeholder="Enter Password" required>
+            <!--<input type="password" class="input-field" placeholder="Confirm Password" required>-->
+            <input type="checkbox" class="check-box"><span>I agree that I'm authorised to access this system</span>
+            <button type="submit" class="submit-btn">Register</button>
+          </form>
+          <form id="login" action="\login" method="POST" class="input-group" >
+            <br><br>
+            <input type="text" class="input-field" name="uid" autocomplete="off" placeholder="User Id" required>
+            <input type="password" class="input-field" name="upass" placeholder="Enter Password" required><br>
+            <input type="checkbox" class="check-box"><span>Remember Password</span><br>
+            <button type="submit" class="submit-btn">Log In</button>
+          </form> 
+      </div>
+    </div>
+    <video id="videoBG" autoplay mute loop> 
+        <source src="{{ url_for('static', filename='vid/bgweapons.mp4') }}" type="video/mp4">
+    </video> 
+    <embed src="{{ url_for('static', filename='aud/loginbgm.mp3') }}" loop="true" autostart="true" width="2" height="0">
+  <script>
+    var x= document.getElementById("login");
+    var y= document.getElementById("register");
+    var z= document.getElementById("btn");
+    function register(){
+      x.style.left = "-400px";
+      y.style.left = "50px";
+      z.style.left = "110px";
+    }
+    function login(){
+      x.style.left = "50px";
+      y.style.left = "450px";
+      z.style.left = "0";
+    }
+  </script>
+  <script src="{{ url_for('static', filename='styles/jquery.splashscreen.js') }} "></script>
+  <script src="{{ url_for('static', filename='styles/script.js') }} "></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</body>
+</html>

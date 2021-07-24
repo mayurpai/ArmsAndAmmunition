@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Arms and Ammunition</title>
+
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/editdbstyles.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/splashscreen.css') }}" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script src="http://ajax.microsoft.com/ajax/jQuery/jquery-1.4.4.min.js"></script>
+        <script src="{{ url_for('static', filename='styles/jquery.splashscreen.js') }}"></script>
+        <script src="{{ url_for('static', filename='styles/script.js') }}"></script>
+    </head>
+
+    <header>
+	    <div class="main">
+		    <div class="logo">
+          <a href="\"><img src="{{ url_for('static', filename='images/header.png') }}">
+		    </div>
+	    </div>
+    </header>
+
+    <!--<div id="promoIMG">
+    </div>-->
+
+    <body>
+      <div id="mySidenav" class="sidenav">
+        <a href="/manufacturers" id="manufacturers">Manufacturers<i class="fa fa-fw fa-cog"></i></a>
+        <a href="/vendors" id="vendors">Vendors<i class="fa fa-fw fa-users"></i></a>
+        <a href="/weapons" id="weapons">Weapons<i class="fa fa-fw fa-bomb"></i></a>
+        <a href="/ammunition" id="ammunition">Ammunition<i class="fa fa-fw fa-database"></i></a>  
+        <a href="/order" id="order" style="background-color: gold;">Order<i class="fa fa-fw fa-shopping-cart"></i></a>   
+        <a href="/details" id="triggers">Triggers<i class="fa fa-fw fa-server"></i></a>   
+      </div>
+    
+        <h1><span class="yellow" style="font-size: 60px;">Order</pan></h1>
+        <div class="hero">
+          <div class="form-box" style="height: 700px; background-image: url({{ url_for('static', filename='images/order_form_bg.png') }});">
+            <form id="login" class="input-group" action="https://formspree.io/f/mnqollor" method="POST" >
+              <h1>Weapons</h1>
+              <input type="text" name="Weapon ID" class="input-field" placeholder="Weapon ID" required>
+              <input type="text" name="Weapon Name" class="input-field" placeholder="Weapon name" required>
+              <select name="Weapon Type" id="wtype">
+                <option value="">Weapon type</option>
+                <option value="handgun">Handgun</option>
+                <option value="smg">SMG</option>
+                <option value="assault_rifle">Assault Rifle</option>
+                <option value="sniper">Sniper Rifle</option>
+              </select>
+              <input type="number" name="Quantity" class="input-field" placeholder="Quantity" required>
+              <input type="checkbox" name="Confirmation" class="check-box" required><span>Confirm order</span><br>
+              <button type="submit" class="submit-btn">Place Order</button>
+            </form>
+
+            <form id="login" class="input-group" style="left: 700px;" action="https://formspree.io/f/moqpyyyd" method="POST">
+              <h1>Ammo</h1>
+              <input type="text" name="Ammo Name" class="input-field2" placeholder="Ammo Name" required>
+              <input type="number" name="Bullet Diameter" class="input-field2" placeholder="Bullet Diameter">
+              <input type="number" name="Case Length" class="input-field2" placeholder="Case Length">
+              <label for="ammoquant" style="font-size: 24px; color: #000;">Quantity:</label>
+              <input type="range" id="bullets" class="ammoquant" name="Ammo Quantity" min="0" max="1000" oninput="this.nextElementSibling.value = this.value" required>
+              <output style="font-size: 24px;">24</output><br>
+              <input type="checkbox" name="Confirmation" class="check-box" required><span style="color: #000;" >Confirm order</span><br>
+              <button type="submit" class="submit-btn">Place Order</button>
+            </form>
+          </div>
+        </div>
+
+<script>
+  window.addEventListener("DOMContentLoaded", function() {
+
+    // get the form elements defined in your form HTML above
+    
+    var form = document.getElementById("my-form");
+    var button = document.getElementById("my-form-button");
+    var status = document.getElementById("my-form-status");
+
+    // Success and Error functions for after the form is submitted
+    
+    function success() {
+      form.reset();
+      button.style = "display: none ";
+      status.innerHTML = "Thanks!";
+    }
+
+    function error() {
+      status.innerHTML = "Oops! There was a problem.";
+    }
+
+    // handle the form submission event
+
+    form.addEventListener("submit", function(ev) {
+      ev.preventDefault();
+      var data = new FormData(form);
+      ajax(form.method, form.action, data, success, error);
+    });
+  });
+  
+  // helper function for sending an AJAX request
+
+  function ajax(method, url, data, success, error) {
+    var xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        success(xhr.response, xhr.responseType);
+      } else {
+        error(xhr.status, xhr.response, xhr.responseType);
+      }
+    };
+    xhr.send(data);
+  }
+
+</script>
+
+    </body>
+
+    <footer>
+      <div class="row">
+        <div class="column3">
+          <img src="{{ url_for('static', filename='images/dev_logo.png') }}">
+        </div>
+        <div class="columnt">
+          <h1>Developed by</h1>
+          <div class="column4">
+            <h1>Mayur Pai B H</h1>
+            <h2>Backend Developer</h2>
+            <h3>4SF18IS053</h3>
+            <p>mayur5pai@gmail.com</p>
+            <p>+91 9611609185</p>
+          </div>
+        
+          <div class="column5">
+            <h1>Krishna G Kamath</h1>
+            <h2>Frontend Developer</h2>
+            <h3>4SF18IS044</h3>
+            <p>krishnagkamath@gmail.com</p>
+            <p>+91 9483912385</p>
+          </div>
+        </div>
+        <div class="column6">   
+          <div class="vl"></div>
+        </div>
+        <div class="social">
+          <h1>Mayur Pai B H</h1>
+          <a href="https://wa.me/+919611609185"><i class="fa fa-whatsapp fa-3x"></i></a>
+          <a href="https://www.instagram.com/unmatched._.soul/"></a><i class="fa fa-instagram fa-3x"></i>
+          <a href="https://www.linkedin.com/in/mayur-pai5/"><i class="fa fa-linkedin fa-3x"></i></a>
+          <h1>Krishna G Kamath</h1>
+          <a href="https://wa.me/+919483912385"><i class="fa fa-whatsapp fa-3x"></i></a>
+          <a href="https://www.instagram.com/krishnagkamath/"><i class="fa fa-instagram fa-3x"></i></a>
+          <a href="https://www.linkedin.com/in/krishnagkamath/"><i class="fa fa-linkedin fa-3x"></i></a>
+        </div>
+      </div>
+      <div class="copyright">
+        <hr>
+        <h4>Copyright © 2020 Mayur & Krishna. All rights reserved.</h4>
+      </div>
+    </footer>
+</html>

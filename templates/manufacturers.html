@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Arms and Ammunition</title>
+
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/dbstyles.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/splashscreen.css') }}" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+        <script src="http://ajax.microsoft.com/ajax/jQuery/jquery-1.4.4.min.js"></script>
+        <script src="{{ url_for('static', filename='styles/jquery.splashscreen.js') }}"></script>
+        <script src="{{ url_for('static', filename='styles/script.js') }}"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    </head>
+
+    <header>
+	    <div class="main">
+		    <div class="logo">
+          <a href="\"><img src="{{ url_for('static', filename='images/header.png') }}">
+		    </div>
+	    </div>
+    </header>
+
+    <!--<div id="promoIMG">
+    </div>-->
+
+    <body>
+      <div id="mySidenav" class="sidenav">
+        <a href="/manufacturers" id="manufacturers" style="background-color: gold;">Manufacturers<i class="fa fa-fw fa-cog"></i></a>
+        <a href="/vendors" id="vendors">Vendors<i class="fa fa-fw fa-users"></i></a>
+        <a href="/weapons" id="weapons">Weapons<i class="fa fa-fw fa-bomb"></i></a>
+        <a href="/ammunition" id="ammunition">Ammunition<i class="fa fa-fw fa-database"></i></a> 
+        <a href="/order" id="order">Order<i class="fa fa-fw fa-shopping-cart"></i></a>   
+      <a href="/details" id="triggers">Triggers<i class="fa fa-fw fa-server"></i></a>        
+      </div>
+    
+        <h1><span class="yellow">Manufacturers</pan></h1>
+            <h2>The <a>Gun</a> makers</h2>
+            
+            <table class="container">
+              <thead>
+                  <tr>
+                      <th><h1>Manufacturer's ID</h1></th>
+                      <th><h1>Manufacturer's Name</h1></th>
+                      <th><h1>Manufacturer's Address</h1></th>
+                      <th><h1>Manufacturer's Email</h1></th>
+                  </tr>
+              </thead>
+              <tbody>
+                {% for post in query %}
+                  <tr>
+                    <th scope="row">{{post.Mid}}</th>
+                    <td>{{post.Mname}}</td>
+                    <td>{{post.Maddress}}</td>
+                    <td>{{post.Memail}}</td>
+                    <!-- <td><a href="/edit/{{post.Wid}}"><button class="btn btn-primary">Edit </button> </a> </td>
+                    <td><a href="/delete/{{post.Wid}}"><button onclick="return confirm('Are You Sure, You Wanna Delete This Data?');" class="btn btn-danger">Delete </button> </a> </td> -->
+                  </tr>
+                {% endfor %}
+          </tbody>
+        </table>
+    </body>
+
+    <footer>
+      <div class="row">
+        <div class="column3">
+          <img src="{{ url_for('static', filename='images/dev_logo.png') }}">
+        </div>
+        <div class="columnt">
+          <h1>Developed by</h1>
+          <div class="column4">
+            <h1>Mayur Pai B H</h1>
+            <h2>Backend Developer</h2>
+            <h3>4SF18IS053</h3>
+            <p>mayur5pai@gmail.com</p>
+            <p>+91 9611609185</p>
+          </div>
+        
+          <div class="column5">
+            <h1>Krishna G Kamath</h1>
+            <h2>Frontend Developer</h2>
+            <h3>4SF18IS044</h3>
+            <p>krishnagkamath@gmail.com</p>
+            <p>+91 9483912385</p>
+          </div>
+        </div>
+        <div class="column6">   
+          <div class="vl"></div>
+        </div>
+        <div class="social">
+          <h1>Mayur Pai B H</h1>
+          <a href="https://wa.me/+919611609185"><i class="fa fa-whatsapp fa-3x"></i></a>
+          <a href="https://www.instagram.com/unmatched._.soul/"></a><i class="fa fa-instagram fa-3x"></i>
+          <a href="https://www.linkedin.com/in/mayur-pai5/"><i class="fa fa-linkedin fa-3x"></i></a>
+          <h1>Krishna G Kamath</h1>
+          <a href="https://wa.me/+919483912385"><i class="fa fa-whatsapp fa-3x"></i></a>
+          <a href="https://www.instagram.com/krishnagkamath/"><i class="fa fa-instagram fa-3x"></i></a>
+          <a href="https://www.linkedin.com/in/krishnagkamath/"><i class="fa fa-linkedin fa-3x"></i></a>
+        </div>
+      </div>
+      <div class="copyright">
+        <hr>
+        <h4>Copyright © 2020 Mayur & Krishna. All rights reserved.</h4>
+      </div>
+    </footer>
+</html>

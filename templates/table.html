@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Booking
+{% endblock title %}
+
+{% block body %}
+{% with messages=get_flashed_messages(with_categories=true) %}
+{% if messages %}
+{% for category, message in messages %}
+
+<div class="alert alert-{{category}} alert-dismissible fade show" role="alert">
+    {{message}}
+
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+
+{% endfor %}
+{% endif %}
+{% endwith %}
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Wid</th>
+      <th scope="col">Wname</th>
+      <th scope="col">Wtype</th>
+      <th scope="col">Wlicense</th>
+      <th scope="col">Manid</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for post in query %}
+    <tr>
+      <th scope="row">{{post.Wid}}</th>
+      <td>{{post.Wname}}</td>
+      <td>{{post.Wtype}}</td>
+      <td>{{post.Wlicense}}</td>
+      <td>{{post.Manid}}</td>
+      <td><a href="/edit/{{post.Wid}}"><button class="btn btn-primary">Edit </button> </a> </td>
+      <td><a href="/delete/{{post.Wid}}"><button onclick="return confirm('Are You Sure, You Wanna Delete This Data?');" class="btn btn-danger">Delete </button> </a> </td>
+    </tr>
+    {% endfor %}
+  
+  </tbody>
+</table>
+
+
+{% endblock body %}

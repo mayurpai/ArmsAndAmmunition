@@ -1,0 +1,14 @@
+#splashScreen img{
+    margin:0;
+}
+
+#splashScreen{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-color:#bfbfbf;
+    background-repeat:no-repeat;
+    text-align:center;
+}
