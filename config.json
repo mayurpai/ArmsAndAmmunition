@@ -1,0 +1,11 @@
+{
+    "params":
+    {
+      "local_server":"True",
+      "local_uri": "mysql://root:@localhost/armsandammunition",
+      "prod_uri":"mysql://root:@localhost/armsandammunition",
+      "gmail-user":"armsandammunition1@gmail.com",
+      "gmail-password":"************************"
+    }
+  }
+  
